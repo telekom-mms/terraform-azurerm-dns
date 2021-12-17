@@ -9,28 +9,28 @@ variable "tags" {
 }
 # resource definition
 variable "dns_zone" {
-  type    = any
-  default = {}
+  type        = any
+  default     = {}
   description = "resource definition, default settings are defined within locals and merged with var settings"
 }
 variable "private_dns_zone" {
-  type    = any
-  default = {}
+  type        = any
+  default     = {}
   description = "resource definition, default settings are defined within locals and merged with var settings"
 }
 variable "dns_a_record" {
-  type    = any
-  default = {}
+  type        = any
+  default     = {}
   description = "resource definition, default settings are defined within locals and merged with var settings"
 }
 variable "dns_a_target" {
-  type    = any
-  default = {}
+  type        = any
+  default     = {}
   description = "resource definition, default settings are defined within locals and merged with var settings"
 }
 variable "dns_cname_record" {
-  type    = any
-  default = {}
+  type        = any
+  default     = {}
   description = "resource definition, default settings are defined within locals and merged with var settings"
 }
 
@@ -39,7 +39,7 @@ locals {
   default = {
     tags = {}
     # resource definition
-    dns_zone = {}
+    dns_zone         = {}
     private_dns_zone = {}
     dns_a_record = {
       ttl = "900"

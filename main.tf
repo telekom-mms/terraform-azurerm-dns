@@ -1,4 +1,11 @@
-# DNS Zone
+/**
+ * # dns
+ *
+ * This module manages Azure DNS Zones.
+ *
+*/
+
+/** DNS Zone */
 resource "azurerm_dns_zone" "dns_zone" {
   for_each = local.dns_zone
 
@@ -11,6 +18,7 @@ resource "azurerm_dns_zone" "dns_zone" {
   }
 }
 
+/** Private DNS Zone */
 resource "azurerm_private_dns_zone" "private_dns_zone" {
   for_each = local.private_dns_zone
 
@@ -23,7 +31,7 @@ resource "azurerm_private_dns_zone" "private_dns_zone" {
   }
 }
 
-# A Records
+/** DNS A Records */
 resource "azurerm_dns_a_record" "dns_a_record" {
   for_each = local.dns_a_record
 
@@ -38,7 +46,8 @@ resource "azurerm_dns_a_record" "dns_a_record" {
     tag => local.tags[tag]
   }
 }
-# alias records to azure resources
+
+/** DNS Alias Records to Azure Resources */
 resource "azurerm_dns_a_record" "dns_a_target" {
   for_each = local.dns_a_target
 
@@ -54,7 +63,7 @@ resource "azurerm_dns_a_record" "dns_a_target" {
   }
 }
 
-# CNAME Records
+/** DNS CNAME Records */
 resource "azurerm_dns_cname_record" "dns_cname_record" {
   for_each = local.dns_cname_record
 
