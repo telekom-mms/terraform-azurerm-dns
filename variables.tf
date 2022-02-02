@@ -1,13 +1,3 @@
-variable "resource_group_name" {
-  type        = string
-  description = "resource_group whitin the resource should be created"
-}
-variable "tags" {
-  type        = any
-  default     = {}
-  description = "mapping of tags to assign, default settings are defined within locals and merged with var settings"
-}
-# resource definition
 variable "dns_zone" {
   type        = any
   default     = {}
@@ -35,42 +25,53 @@ variable "dns_cname_record" {
 }
 
 locals {
-  # default values
   default = {
-    tags = {}
     # resource definition
-    dns_zone         = {}
-    private_dns_zone = {}
+    dns_zone = {
+      name = ""
+      tags = {}
+    }
+    private_dns_zone = {
+      name = ""
+      tags = {}
+    }
     dns_a_record = {
+      name = ""
       ttl = "900"
+      tags = {}
     }
     dns_a_target = {
+      name = ""
       ttl = "900"
+      tags = {}
     }
     dns_cname_record = {
+      name = ""
       ttl = "900"
+      tags = {}
     }
   }
 
-  # merge custom and default values
-  tags             = merge(local.default.tags, var.tags)
-  dns_zone         = merge(local.default.dns_zone, var.dns_zone)
-  private_dns_zone = merge(local.default.private_dns_zone, var.private_dns_zone)
-
-  # deep merge
+  # compare and merge custom and default values
+  # merge all custom and default values
+  dns_zone = {
+    for dns_zone in keys(var.dns_zone) :
+    dns_zone => merge(local.default.dns_zone, var.dns_zone[dns_zone])
+  }
+  private_dns_zone = {
+    for private_dns_zone in keys(var.private_dns_zone) :
+    private_dns_zone => merge(local.default.private_dns_zone, var.private_dns_zone[private_dns_zone])
+  }
   dns_a_record = {
-    # get all config
-    for config in keys(var.dns_a_record) :
-    config => merge(local.default.dns_a_record, var.dns_a_record[config])
+    for dns_a_record in keys(var.dns_a_record) :
+    dns_a_record => merge(local.default.dns_a_record, var.dns_a_record[dns_a_record])
   }
   dns_a_target = {
-    # get all config
-    for config in keys(var.dns_a_target) :
-    config => merge(local.default.dns_a_target, var.dns_a_target[config])
+    for dns_a_target in keys(var.dns_a_target) :
+    dns_a_target => merge(local.default.dns_a_target, var.dns_a_target[dns_a_target])
   }
   dns_cname_record = {
-    # get all config
-    for config in keys(var.dns_cname_record) :
-    config => merge(local.default.dns_cname_record, var.dns_cname_record[config])
+    for dns_cname_record in keys(var.dns_cname_record) :
+    dns_cname_record => merge(local.default.dns_cname_record, var.dns_cname_record[dns_cname_record])
   }
 }
