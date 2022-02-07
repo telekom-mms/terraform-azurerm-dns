@@ -1,5 +1,4 @@
 <!-- BEGIN_TF_DOCS -->
-
 # dns
 
 This module manages Azure DNS Zones.
@@ -8,59 +7,58 @@ This module manages Azure DNS Zones.
 
 ## Requirements
 
-| Name      | Version  |
-| --------- | -------- |
-| terraform | >=0.12   |
-| azurerm   | >=2.19.0 |
+| Name | Version |
+|------|---------|
+| terraform | >=0.12 |
+| azurerm | >=2.19.0 |
 
 ## Providers
 
-| Name    | Version  |
-| ------- | -------- |
+| Name | Version |
+|------|---------|
 | azurerm | >=2.19.0 |
 
 ## Resources
 
-| Name                                      | Type     |
-| ----------------------------------------- | -------- |
-| azurerm_dns_a_record.dns_a_record         | resource |
-| azurerm_dns_a_record.dns_a_target         | resource |
+| Name | Type |
+|------|------|
+| azurerm_dns_a_record.dns_a_record | resource |
+| azurerm_dns_a_record.dns_a_target | resource |
 | azurerm_dns_cname_record.dns_cname_record | resource |
-| azurerm_dns_zone.dns_zone                 | resource |
+| azurerm_dns_zone.dns_zone | resource |
 | azurerm_private_dns_zone.private_dns_zone | resource |
 
 ## Inputs
 
-| Name             | Description                                                                                  | Type  | Default | Required |
-| ---------------- | -------------------------------------------------------------------------------------------- | ----- | ------- | :------: |
-| dns_a_record     | resource definition, default settings are defined within locals and merged with var settings | `any` | `{}`    |    no    |
-| dns_a_target     | resource definition, default settings are defined within locals and merged with var settings | `any` | `{}`    |    no    |
-| dns_cname_record | resource definition, default settings are defined within locals and merged with var settings | `any` | `{}`    |    no    |
-| dns_zone         | resource definition, default settings are defined within locals and merged with var settings | `any` | `{}`    |    no    |
-| private_dns_zone | resource definition, default settings are defined within locals and merged with var settings | `any` | `{}`    |    no    |
+| Name | Description | Type | Default | Required |
+|------|-------------|------|---------|:--------:|
+| dns_a_record | resource definition, default settings are defined within locals and merged with var settings | `any` | `{}` | no |
+| dns_a_target | resource definition, default settings are defined within locals and merged with var settings | `any` | `{}` | no |
+| dns_cname_record | resource definition, default settings are defined within locals and merged with var settings | `any` | `{}` | no |
+| dns_zone | resource definition, default settings are defined within locals and merged with var settings | `any` | `{}` | no |
+| private_dns_zone | resource definition, default settings are defined within locals and merged with var settings | `any` | `{}` | no |
 
 ## Outputs
 
-| Name     | Description              |
-| -------- | ------------------------ |
+| Name | Description |
+|------|-------------|
 | dns_zone | azurerm_dns_zone results |
 
 ## Examples
 
 ```hcl
 module "dns" {
-  source           = "../terraform-dns"
-  dns_zone            = {
-    domain_com  = {
-      name = "domain.com"
+  source = "../terraform-dns"
+  dns_zone = {
+    domain_com = {
+      name                = "domain.com"
       resource_group_name = "service-infrastructure-rg"
     }
-    domain_de  = {
-      name = "domain.de"
+    domain_de = {
+      name                = "domain.de"
       resource_group_name = "service-infrastructure-rg"
     }
   }
 }
 ```
-
 <!-- END_TF_DOCS -->
