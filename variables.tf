@@ -37,17 +37,17 @@ locals {
     }
     dns_a_record = {
       name = ""
-      ttl = "900"
+      ttl  = "900"
       tags = {}
     }
     dns_a_target = {
       name = ""
-      ttl = "900"
+      ttl  = "900"
       tags = {}
     }
     dns_cname_record = {
       name = ""
-      ttl = "900"
+      ttl  = "900"
       tags = {}
     }
   }
