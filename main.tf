@@ -25,7 +25,7 @@ resource "azurerm_private_dns_zone" "private_dns_zone" {
   tags = local.private_dns_zone[each.key].tags
 }
 
-/** DNS A Records */
+/** A Records */
 resource "azurerm_dns_a_record" "dns_a_record" {
   for_each = var.dns_a_record
 
@@ -38,7 +38,7 @@ resource "azurerm_dns_a_record" "dns_a_record" {
   tags = local.dns_a_record[each.key].tags
 }
 
-/** DNS Alias Records to Azure Resources */
+/** Alias Records to Azure Resources */
 resource "azurerm_dns_a_record" "dns_a_target" {
   for_each = var.dns_a_target
 
@@ -51,7 +51,7 @@ resource "azurerm_dns_a_record" "dns_a_target" {
   tags = local.dns_a_target[each.key].tags
 }
 
-/** DNS CNAME Records */
+/** CNAME Records */
 resource "azurerm_dns_cname_record" "dns_cname_record" {
   for_each = var.dns_cname_record
 
@@ -62,4 +62,24 @@ resource "azurerm_dns_cname_record" "dns_cname_record" {
   record              = local.dns_cname_record[each.key].record
 
   tags = local.dns_cname_record[each.key].tags
+}
+
+
+/** TXT Records */
+resource "azurerm_dns_txt_record" "dns_txt_record" {
+  for_each = var.dns_txt_record
+
+  name                = local.dns_txt_record[each.key].name == "" ? each.key : local.dns_txt_record[each.key].name
+  resource_group_name = local.dns_txt_record[each.key].resource_group_name
+  zone_name           = local.dns_txt_record[each.key].zone_name
+  ttl                 = local.dns_txt_record[each.key].ttl
+
+  dynamic "record" {
+    for_each = local.dns_txt_record[each.key].record
+    content {
+      value = local.dns_txt_record[each.key].record[record.key].value
+    }
+  }
+
+  tags = local.dns_txt_record[each.key].tags
 }

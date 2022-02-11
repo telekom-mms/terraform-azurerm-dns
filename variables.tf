@@ -23,6 +23,11 @@ variable "dns_cname_record" {
   default     = {}
   description = "resource definition, default settings are defined within locals and merged with var settings"
 }
+variable "dns_txt_record" {
+  type        = any
+  default     = {}
+  description = "resource definition, default settings are defined within locals and merged with var settings"
+}
 
 locals {
   default = {
@@ -48,11 +53,22 @@ locals {
     dns_cname_record = {
       name = ""
       ttl  = "900"
+      record = ""
+      tags = {}
+    }
+    dns_txt_record = {
+      name = ""
+      ttl  = "900"
+      records = {}
       tags = {}
     }
   }
 
   # compare and merge custom and default values
+  dns_txt_record_values = {
+    for dns_txt_record in keys(var.dns_txt_record) :
+    dns_txt_record => merge(local.default.dns_txt_record, var.dns_txt_record[dns_txt_record])
+  }
   # merge all custom and default values
   dns_zone = {
     for dns_zone in keys(var.dns_zone) :
@@ -73,5 +89,15 @@ locals {
   dns_cname_record = {
     for dns_cname_record in keys(var.dns_cname_record) :
     dns_cname_record => merge(local.default.dns_cname_record, var.dns_cname_record[dns_cname_record])
+  }
+  dns_txt_record = {
+    for dns_txt_record in keys(var.dns_txt_record) :
+    dns_txt_record => merge(
+      local.dns_txt_record_values[dns_txt_record],
+      {
+        for config in ["records"] :
+        config => merge(local.default.dns_txt_record[config], local.dns_txt_record_values[dns_txt_record][config])
+      }
+    )
   }
 }
