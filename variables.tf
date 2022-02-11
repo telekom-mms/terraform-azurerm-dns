@@ -51,16 +51,16 @@ locals {
       tags = {}
     }
     dns_cname_record = {
-      name = ""
-      ttl  = "900"
+      name   = ""
+      ttl    = "900"
       record = ""
-      tags = {}
+      tags   = {}
     }
     dns_txt_record = {
-      name = ""
-      ttl  = "900"
+      name    = ""
+      ttl     = "900"
       records = {}
-      tags = {}
+      tags    = {}
     }
   }
 
