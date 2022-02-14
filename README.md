@@ -23,7 +23,6 @@ This module manages Azure DNS Zones.
 | Name | Type |
 |------|------|
 | azurerm_dns_a_record.dns_a_record | resource |
-| azurerm_dns_a_record.dns_a_target | resource |
 | azurerm_dns_cname_record.dns_cname_record | resource |
 | azurerm_dns_txt_record.dns_txt_record | resource |
 | azurerm_dns_zone.dns_zone | resource |
@@ -34,7 +33,6 @@ This module manages Azure DNS Zones.
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
 | dns_a_record | resource definition, default settings are defined within locals and merged with var settings | `any` | `{}` | no |
-| dns_a_target | resource definition, default settings are defined within locals and merged with var settings | `any` | `{}` | no |
 | dns_cname_record | resource definition, default settings are defined within locals and merged with var settings | `any` | `{}` | no |
 | dns_txt_record | resource definition, default settings are defined within locals and merged with var settings | `any` | `{}` | no |
 | dns_zone | resource definition, default settings are defined within locals and merged with var settings | `any` | `{}` | no |
