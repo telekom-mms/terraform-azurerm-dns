@@ -34,21 +34,9 @@ resource "azurerm_dns_a_record" "dns_a_record" {
   zone_name           = local.dns_a_record[each.key].zone_name
   ttl                 = local.dns_a_record[each.key].ttl
   records             = local.dns_a_record[each.key].records
+  target_resource_id  = local.dns_a_record[each.key].target_resource_id
 
   tags = local.dns_a_record[each.key].tags
-}
-
-/** Alias Records to Azure Resources */
-resource "azurerm_dns_a_record" "dns_a_target" {
-  for_each = var.dns_a_target
-
-  name                = local.dns_a_target[each.key].name == "" ? each.key : local.dns_a_target[each.key].name
-  resource_group_name = local.dns_a_target[each.key].resource_group_name
-  zone_name           = local.dns_a_target[each.key].zone_name
-  ttl                 = local.dns_a_target[each.key].ttl
-  target_resource_id  = local.dns_a_target[each.key].target_resource_id
-
-  tags = local.dns_a_target[each.key].tags
 }
 
 /** CNAME Records */
