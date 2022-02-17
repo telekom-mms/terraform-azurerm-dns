@@ -48,7 +48,7 @@ This module manages Azure DNS Zones.
 
 ```hcl
 module "dns" {
-  source = "../terraform-dns"
+  source = "registry.terraform.io/T-Systems-MMS/dns/azurerm"
   dns_zone = {
     domain_com = {
       name                = "domain.com"

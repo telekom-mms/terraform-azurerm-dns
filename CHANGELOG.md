@@ -1,8 +1,16 @@
 # Changelog
 
-## [0.0.1](https://github.com/T-Systems-MMS/terraform-dns/tree/0.0.1) (2021-12-17)
+## [0.0.2](https://github.com/T-Systems-MMS/terraform-azurerm-dns/tree/0.0.2) (2022-02-17)
 
-[Full Changelog](https://github.com/T-Systems-MMS/terraform-dns/compare/377d2b5afa5d0600b2c115c315584aba88707ac5...0.0.1)
+[Full Changelog](https://github.com/T-Systems-MMS/terraform-azurerm-dns/compare/0.0.1...0.0.2)
+
+**Closed issues:**
+
+- A-Record - possibility to use records instead of target\_resource\_id? [\#2](https://github.com/T-Systems-MMS/terraform-azurerm-dns/issues/2)
+
+## [0.0.1](https://github.com/T-Systems-MMS/terraform-azurerm-dns/tree/0.0.1) (2021-12-17)
+
+[Full Changelog](https://github.com/T-Systems-MMS/terraform-azurerm-dns/compare/377d2b5afa5d0600b2c115c315584aba88707ac5...0.0.1)
 
 
 
