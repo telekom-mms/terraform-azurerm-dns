@@ -42,6 +42,7 @@ This module manages Azure DNS Zones.
 
 | Name | Description |
 |------|-------------|
+| dns_a_record | azurerm_dns_a_record results |
 | dns_zone | azurerm_dns_zone results |
 
 ## Examples
