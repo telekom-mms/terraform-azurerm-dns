@@ -23,6 +23,11 @@ variable "dns_txt_record" {
   default     = {}
   description = "resource definition, default settings are defined within locals and merged with var settings"
 }
+variable "dns_mx_record" {
+  type        = any
+  default     = {}
+  description = "resource definition, default settings are defined within locals and merged with var settings"
+}
 
 locals {
   default = {
@@ -49,6 +54,12 @@ locals {
       tags   = {}
     }
     dns_txt_record = {
+      name    = ""
+      ttl     = "900"
+      records = {}
+      tags    = {}
+    }
+    dns_mx_record = {
       name    = ""
       ttl     = "900"
       records = {}
@@ -87,5 +98,9 @@ locals {
         config => merge(local.default.dns_txt_record[config], local.dns_txt_record_values[dns_txt_record][config])
       }
     )
+  }
+  dns_mx_record = {
+    for dns_mx_record in keys(var.dns_mx_record) :
+    dns_mx_record => merge(local.default.dns_mx_record, var.dns_mx_record[dns_mx_record])
   }
 }
