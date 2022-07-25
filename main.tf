@@ -82,8 +82,8 @@ resource "azurerm_dns_mx_record" "dns_mx_record" {
   ttl                 = local.dns_mx_record[each.key].ttl
 
   record {
-    preference  = local.dns_mx_record[each.key].record.preference
-    exchange = local.dns_mx_record[each.key].record.exchange
+    preference = local.dns_mx_record[each.key].record.preference
+    exchange   = local.dns_mx_record[each.key].record.exchange
   }
 
   tags = local.dns_mx_record[each.key].tags
