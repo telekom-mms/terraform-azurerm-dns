@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.0.3](https://github.com/T-Systems-MMS/terraform-azurerm-dns/tree/1.0.3) (2022-07-22)
+
+[Full Changelog](https://github.com/T-Systems-MMS/terraform-azurerm-dns/compare/1.0.2...1.0.3)
+
+**Implemented enhancements:**
+
+- add mx resource [\#13](https://github.com/T-Systems-MMS/terraform-azurerm-dns/pull/13) ([michaelamattes](https://github.com/michaelamattes))
+
 ## [1.0.2](https://github.com/T-Systems-MMS/terraform-azurerm-dns/tree/1.0.2) (2022-05-09)
 
 [Full Changelog](https://github.com/T-Systems-MMS/terraform-azurerm-dns/compare/1.0.1...1.0.2)
