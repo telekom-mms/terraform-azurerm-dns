@@ -1,48 +1,56 @@
 # Changelog
 
-## [1.0.3](https://github.com/T-Systems-MMS/terraform-azurerm-dns/tree/1.0.3) (2022-07-22)
+## [2.0.0](https://github.com/telekom-mms/terraform-azurerm-dns/tree/2.0.0) (2023-09-14)
 
-[Full Changelog](https://github.com/T-Systems-MMS/terraform-azurerm-dns/compare/1.0.2...1.0.3)
-
-**Implemented enhancements:**
-
-- add mx resource [\#13](https://github.com/T-Systems-MMS/terraform-azurerm-dns/pull/13) ([michaelamattes](https://github.com/michaelamattes))
-
-## [1.0.2](https://github.com/T-Systems-MMS/terraform-azurerm-dns/tree/1.0.2) (2022-05-09)
-
-[Full Changelog](https://github.com/T-Systems-MMS/terraform-azurerm-dns/compare/1.0.1...1.0.2)
-
-**Merged pull requests:**
-
-- Update hashicorp/setup-terraform action to v2 [\#12](https://github.com/T-Systems-MMS/terraform-azurerm-dns/pull/12) ([renovate[bot]](https://github.com/apps/renovate))
-- Update creyD/prettier\_action action to v4 [\#11](https://github.com/T-Systems-MMS/terraform-azurerm-dns/pull/11) ([renovate[bot]](https://github.com/apps/renovate))
-- Update actions/checkout action [\#10](https://github.com/T-Systems-MMS/terraform-azurerm-dns/pull/10) ([renovate[bot]](https://github.com/apps/renovate))
-- Update github-actions-x/commit action to v2.9 [\#9](https://github.com/T-Systems-MMS/terraform-azurerm-dns/pull/9) ([renovate[bot]](https://github.com/apps/renovate))
-- add renovate config [\#5](https://github.com/T-Systems-MMS/terraform-azurerm-dns/pull/5) ([michaelamattes](https://github.com/michaelamattes))
-
-## [1.0.1](https://github.com/T-Systems-MMS/terraform-azurerm-dns/tree/1.0.1) (2022-03-18)
-
-[Full Changelog](https://github.com/T-Systems-MMS/terraform-azurerm-dns/compare/1.0.0...1.0.1)
-
-**Merged pull requests:**
-
-- add more output arguments [\#4](https://github.com/T-Systems-MMS/terraform-azurerm-dns/pull/4) ([michaelamattes](https://github.com/michaelamattes))
-
-## [1.0.0](https://github.com/T-Systems-MMS/terraform-azurerm-dns/tree/1.0.0) (2022-02-17)
-
-[Full Changelog](https://github.com/T-Systems-MMS/terraform-azurerm-dns/compare/0.0.1...1.0.0)
+[Full Changelog](https://github.com/telekom-mms/terraform-azurerm-dns/compare/1.0.3...2.0.0)
 
 **Closed issues:**
 
-- A-Record - possibility to use records instead of target\_resource\_id? [\#2](https://github.com/T-Systems-MMS/terraform-azurerm-dns/issues/2)
+- Dependency Dashboard [\#8](https://github.com/telekom-mms/terraform-azurerm-dns/issues/8)
+
+## [1.0.3](https://github.com/telekom-mms/terraform-azurerm-dns/tree/1.0.3) (2022-07-22)
+
+[Full Changelog](https://github.com/telekom-mms/terraform-azurerm-dns/compare/1.0.2...1.0.3)
+
+**Implemented enhancements:**
+
+- add mx resource [\#13](https://github.com/telekom-mms/terraform-azurerm-dns/pull/13) ([michaelamattes](https://github.com/michaelamattes))
+
+## [1.0.2](https://github.com/telekom-mms/terraform-azurerm-dns/tree/1.0.2) (2022-05-09)
+
+[Full Changelog](https://github.com/telekom-mms/terraform-azurerm-dns/compare/1.0.1...1.0.2)
 
 **Merged pull requests:**
 
-- Change var behaviour [\#1](https://github.com/T-Systems-MMS/terraform-azurerm-dns/pull/1) ([michaelamattes](https://github.com/michaelamattes))
+- Update hashicorp/setup-terraform action to v2 [\#12](https://github.com/telekom-mms/terraform-azurerm-dns/pull/12) ([renovate[bot]](https://github.com/apps/renovate))
+- Update creyD/prettier\_action action to v4 [\#11](https://github.com/telekom-mms/terraform-azurerm-dns/pull/11) ([renovate[bot]](https://github.com/apps/renovate))
+- Update actions/checkout action [\#10](https://github.com/telekom-mms/terraform-azurerm-dns/pull/10) ([renovate[bot]](https://github.com/apps/renovate))
+- Update github-actions-x/commit action to v2.9 [\#9](https://github.com/telekom-mms/terraform-azurerm-dns/pull/9) ([renovate[bot]](https://github.com/apps/renovate))
+- add renovate config [\#5](https://github.com/telekom-mms/terraform-azurerm-dns/pull/5) ([michaelamattes](https://github.com/michaelamattes))
 
-## [0.0.1](https://github.com/T-Systems-MMS/terraform-azurerm-dns/tree/0.0.1) (2021-12-17)
+## [1.0.1](https://github.com/telekom-mms/terraform-azurerm-dns/tree/1.0.1) (2022-03-18)
 
-[Full Changelog](https://github.com/T-Systems-MMS/terraform-azurerm-dns/compare/377d2b5afa5d0600b2c115c315584aba88707ac5...0.0.1)
+[Full Changelog](https://github.com/telekom-mms/terraform-azurerm-dns/compare/1.0.0...1.0.1)
+
+**Merged pull requests:**
+
+- add more output arguments [\#4](https://github.com/telekom-mms/terraform-azurerm-dns/pull/4) ([michaelamattes](https://github.com/michaelamattes))
+
+## [1.0.0](https://github.com/telekom-mms/terraform-azurerm-dns/tree/1.0.0) (2022-02-17)
+
+[Full Changelog](https://github.com/telekom-mms/terraform-azurerm-dns/compare/0.0.1...1.0.0)
+
+**Closed issues:**
+
+- A-Record - possibility to use records instead of target\_resource\_id? [\#2](https://github.com/telekom-mms/terraform-azurerm-dns/issues/2)
+
+**Merged pull requests:**
+
+- Change var behaviour [\#1](https://github.com/telekom-mms/terraform-azurerm-dns/pull/1) ([michaelamattes](https://github.com/michaelamattes))
+
+## [0.0.1](https://github.com/telekom-mms/terraform-azurerm-dns/tree/0.0.1) (2021-12-17)
+
+[Full Changelog](https://github.com/telekom-mms/terraform-azurerm-dns/compare/377d2b5afa5d0600b2c115c315584aba88707ac5...0.0.1)
 
 
 
