@@ -1,12 +1,28 @@
 # Changelog
 
-## [2.0.0](https://github.com/telekom-mms/terraform-azurerm-dns/tree/2.0.0) (2023-09-14)
+## [2.0.1](https://github.com/telekom-mms/terraform-azurerm-dns/tree/2.0.1) (2023-09-14)
 
-[Full Changelog](https://github.com/telekom-mms/terraform-azurerm-dns/compare/1.0.3...2.0.0)
+[Full Changelog](https://github.com/telekom-mms/terraform-azurerm-dns/compare/2.0.0...2.0.1)
 
 **Closed issues:**
 
 - Dependency Dashboard [\#8](https://github.com/telekom-mms/terraform-azurerm-dns/issues/8)
+
+## [2.0.0](https://github.com/telekom-mms/terraform-azurerm-dns/tree/2.0.0) (2023-09-14)
+
+[Full Changelog](https://github.com/telekom-mms/terraform-azurerm-dns/compare/1.0.3...2.0.0)
+
+**Implemented enhancements:**
+
+- Enhancements for outputs and examples [\#18](https://github.com/telekom-mms/terraform-azurerm-dns/pull/18) ([habr-mms](https://github.com/habr-mms))
+
+**Merged pull requests:**
+
+- Refactoring [\#19](https://github.com/telekom-mms/terraform-azurerm-dns/pull/19) ([michaelamattes](https://github.com/michaelamattes))
+- add Renovate Dependency Dashboard and automatic merge on patch updates [\#17](https://github.com/telekom-mms/terraform-azurerm-dns/pull/17) ([michaelamattes](https://github.com/michaelamattes))
+- Update actions/checkout action to v3.2.0 [\#16](https://github.com/telekom-mms/terraform-azurerm-dns/pull/16) ([renovate[bot]](https://github.com/apps/renovate))
+- Update actions/checkout action to v3.1.0 [\#15](https://github.com/telekom-mms/terraform-azurerm-dns/pull/15) ([renovate[bot]](https://github.com/apps/renovate))
+- fmt [\#14](https://github.com/telekom-mms/terraform-azurerm-dns/pull/14) ([michaelamattes](https://github.com/michaelamattes))
 
 ## [1.0.3](https://github.com/telekom-mms/terraform-azurerm-dns/tree/1.0.3) (2022-07-22)
 
