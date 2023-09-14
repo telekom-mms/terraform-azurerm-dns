@@ -1,0 +1,18 @@
+{
+  "repos": {
+    "description": "A Terraform module that manages the container resources from the azurerm provider.",
+    "visibility": "public",
+    "default_branch": "main",
+    "homepage": "https://telekom-mms.github.io/terraform-template",
+    "topics": [
+      "terraform",
+      "azure",
+      "azurerm-dns-zone",
+      "azurerm-private-dns-zone",
+      "azurerm-dns-a-record",
+      "azurerm-dns-cname-record",
+      "azurerm-dns-txt-record",
+      "azurerm-dns-mx-record"
+    ]
+  }
+}
