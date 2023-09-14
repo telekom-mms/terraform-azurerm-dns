@@ -29,8 +29,8 @@ module "dns" {
   dns_a_record = {
     "@" = {
       resource_group_name = module.dns.dns_zone["mms-github-plattform.com"].resource_group_name
-      zone_name = module.dns.dns_zone["mms-github-plattform.com"].name
-      records = ["127.0.0.2"]
+      zone_name           = module.dns.dns_zone["mms-github-plattform.com"].name
+      records             = ["127.0.0.2"]
       tags = {
         project     = "mms-github"
         environment = terraform.workspace
@@ -41,8 +41,8 @@ module "dns" {
   dns_cname_record = {
     www = {
       resource_group_name = module.dns.dns_zone["mms-github-plattform.com"].resource_group_name
-      zone_name = module.dns.dns_zone["mms-github-plattform.com"].name
-      record = module.dns.dns_a_record["@"].fqdn
+      zone_name           = module.dns.dns_zone["mms-github-plattform.com"].name
+      record              = module.dns.dns_a_record["@"].fqdn
       tags = {
         project     = "mms-github"
         environment = terraform.workspace
@@ -53,7 +53,7 @@ module "dns" {
   dns_txt_record = {
     dnsauth = {
       resource_group_name = module.dns.dns_zone["mms-github-plattform.com"].resource_group_name
-      zone_name = module.dns.dns_zone["mms-github-plattform.com"].name
+      zone_name           = module.dns.dns_zone["mms-github-plattform.com"].name
       record = {
         frontdoor = {
           value = "frontdoor"
@@ -69,7 +69,7 @@ module "dns" {
   dns_mx_record = {
     mail = {
       resource_group_name = module.dns.dns_zone["mms-github-plattform.com"].resource_group_name
-      zone_name = module.dns.dns_zone["mms-github-plattform.com"].name
+      zone_name           = module.dns.dns_zone["mms-github-plattform.com"].name
       record = {
         mail1 = {
           preference = 10
