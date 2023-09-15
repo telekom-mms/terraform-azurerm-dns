@@ -120,3 +120,14 @@ resource "azurerm_dns_mx_record" "dns_mx_record" {
 
   tags = local.dns_mx_record[each.key].tags
 }
+
+resource "azurerm_private_dns_zone_virtual_network_link" "private_dns_zone_virtual_network_link" {
+  for_each = var.private_dns_zone_virtual_network_link
+
+  name                  = local.private_dns_zone_virtual_network_link[each.key].name == "" ? each.key : local.private_dns_zone_virtual_network_link[each.key].name
+  resource_group_name   = local.private_dns_zone_virtual_network_link[each.key].resource_group_name
+  private_dns_zone_name = local.private_dns_zone_virtual_network_link[each.key].private_dns_zone_name
+  virtual_network_id    = local.private_dns_zone_virtual_network_link[each.key].virtual_network_id
+  registration_enabled  = local.private_dns_zone_virtual_network_link[each.key].registration_enabled
+  tags                  = local.private_dns_zone_virtual_network_link[each.key].tags
+}

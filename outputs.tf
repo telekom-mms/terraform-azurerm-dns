@@ -64,6 +64,17 @@ output "dns_mx_record" {
   }
 }
 
+output "private_dns_zone_virtual_network_link" {
+  description = "Outputs all attributes of resource_type."
+  value = {
+    for private_dns_zone_virtual_network_link in keys(azurerm_private_dns_zone_virtual_network_link.private_dns_zone_virtual_network_link) :
+    private_dns_zone_virtual_network_link => {
+      for key, value in azurerm_private_dns_zone_virtual_network_link.private_dns_zone_virtual_network_link[private_dns_zone_virtual_network_link] :
+      key => value
+    }
+  }
+}
+
 output "variables" {
   description = "Displays all configurable variables passed by the module. __default__ = predefined values per module. __merged__ = result of merging the default values and custom values passed to the module"
   value = {
@@ -95,6 +106,10 @@ output "variables" {
       dns_mx_record = {
         for key in keys(var.dns_mx_record) :
         key => local.dns_mx_record[key]
+      }
+      private_dns_zone_virtual_network_link = {
+        for key in keys(var.private_dns_zone_virtual_network_link) :
+        key => local.private_dns_zone_virtual_network_link[key]
       }
     }
   }

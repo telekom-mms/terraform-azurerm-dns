@@ -28,6 +28,11 @@ variable "dns_mx_record" {
   default     = {}
   description = "resource definition, default settings are defined within locals and merged with var settings"
 }
+variable "private_dns_zone_virtual_network_link" {
+  type        = any
+  default     = {}
+  description = "resource definition, default settings are defined within locals and merged with var settings"
+}
 
 locals {
   default = {
@@ -84,6 +89,11 @@ locals {
       ttl  = 3600 // define default
       tags = {}
     }
+    private_dns_zone_virtual_network_link = {
+      name                 = ""
+      registration_enabled = null
+      tags                 = {}
+    }
   }
 
   // compare and merge custom and default values
@@ -132,5 +142,9 @@ locals {
   dns_mx_record = {
     for dns_mx_record in keys(var.dns_mx_record) :
     dns_mx_record => merge(local.default.dns_mx_record, var.dns_mx_record[dns_mx_record])
+  }
+  private_dns_zone_virtual_network_link = {
+    for private_dns_zone_virtual_network_link in keys(var.private_dns_zone_virtual_network_link) :
+    private_dns_zone_virtual_network_link => merge(local.default.private_dns_zone_virtual_network_link, var.private_dns_zone_virtual_network_link[private_dns_zone_virtual_network_link])
   }
 }
