@@ -1,3 +1,14 @@
+module "network" {
+  source = "registry.terraform.io/telekom-mms/network/azurerm"
+  virtual_network = {
+    vn-app-mms = {
+      location            = "westeurope"
+      resource_group_name = "rg-mms-github"
+      address_space       = ["173.0.0.0/23"]
+    }
+  }
+}
+
 module "dns" {
   source = "registry.terraform.io/telekom-mms/dns/azurerm"
   dns_zone = {
@@ -80,6 +91,18 @@ module "dns" {
           exchange   = "mail2.telekom-mms.com"
         }
       }
+      tags = {
+        project     = "mms-github"
+        environment = terraform.workspace
+        managed-by  = "terraform"
+      }
+    }
+  }
+  private_dns_zone_virtual_network_link = {
+    pl-mms-github = {
+      resource_group_name   = "rg-mms-github"
+      private_dns_zone_name = module.dns.private_dns_zone["mms-github-privat-plattform.com"].name
+      virtual_network_id    = module.network.virtual_network["vn-app-mms"].id
       tags = {
         project     = "mms-github"
         environment = terraform.workspace

@@ -12,7 +12,8 @@
       "azurerm-dns-a-record",
       "azurerm-dns-cname-record",
       "azurerm-dns-txt-record",
-      "azurerm-dns-mx-record"
+      "azurerm-dns-mx-record",
+      "azurerm-private-dns-zone-virtual-network-link"
     ]
   }
 }
