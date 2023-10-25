@@ -1,8 +1,20 @@
 # Changelog
 
+## [2.0.2](https://github.com/telekom-mms/terraform-azurerm-dns/tree/2.0.2) (2023-10-25)
+
+[Full Changelog](https://github.com/telekom-mms/terraform-azurerm-dns/compare/2.0.1...2.0.2)
+
+**Implemented enhancements:**
+
+- Please add support for resource azurerm\_private\_dns\_zone\_virtual\_network\_link to Module [\#3](https://github.com/telekom-mms/terraform-azurerm-dns/issues/3)
+
 ## [2.0.1](https://github.com/telekom-mms/terraform-azurerm-dns/tree/2.0.1) (2023-09-15)
 
 [Full Changelog](https://github.com/telekom-mms/terraform-azurerm-dns/compare/2.0.0...2.0.1)
+
+**Implemented enhancements:**
+
+- https://github.com/telekom-mms/terraform-azurerm-dns/issues/3 [\#20](https://github.com/telekom-mms/terraform-azurerm-dns/pull/20) ([michaelamattes](https://github.com/michaelamattes))
 
 **Closed issues:**
 
