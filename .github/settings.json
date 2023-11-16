@@ -7,13 +7,13 @@
     "topics": [
       "terraform",
       "azure",
-      "azurerm-dns-zone",
-      "azurerm-private-dns-zone",
-      "azurerm-dns-a-record",
-      "azurerm-dns-cname-record",
-      "azurerm-dns-txt-record",
-      "azurerm-dns-mx-record",
-      "azurerm-private-dns-zone-virtual-network-link"
+      "dns-zone",
+      "private-dns-zone",
+      "dns-a-record",
+      "dns-cname-record",
+      "dns-txt-record",
+      "dns-mx-record",
+      "private-dns-zone-virtual-network-link"
     ]
   }
 }
