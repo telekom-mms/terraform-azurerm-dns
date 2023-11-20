@@ -1,6 +1,6 @@
 # Changelog
 
-## [2.0.2](https://github.com/telekom-mms/terraform-azurerm-dns/tree/2.0.2) (2023-11-16)
+## [2.0.2](https://github.com/telekom-mms/terraform-azurerm-dns/tree/2.0.2) (2023-11-20)
 
 [Full Changelog](https://github.com/telekom-mms/terraform-azurerm-dns/compare/2.0.1...2.0.2)
 
