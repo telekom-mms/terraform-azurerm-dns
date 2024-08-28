@@ -1,12 +1,17 @@
 # Changelog
 
-## [2.0.2](https://github.com/telekom-mms/terraform-azurerm-dns/tree/2.0.2) (2023-11-20)
+## [2.0.2](https://github.com/telekom-mms/terraform-azurerm-dns/tree/2.0.2) (2024-08-28)
 
 [Full Changelog](https://github.com/telekom-mms/terraform-azurerm-dns/compare/2.0.1...2.0.2)
 
 **Implemented enhancements:**
 
 - Please add support for resource azurerm\_private\_dns\_zone\_virtual\_network\_link to Module [\#3](https://github.com/telekom-mms/terraform-azurerm-dns/issues/3)
+- Pin version of azurerm to compatible state   [\#25](https://github.com/telekom-mms/terraform-azurerm-dns/pull/25) ([michaelamattes](https://github.com/michaelamattes))
+
+**Merged pull requests:**
+
+- run terrascan in test setting directory [\#22](https://github.com/telekom-mms/terraform-azurerm-dns/pull/22) ([michaelamattes](https://github.com/michaelamattes))
 
 ## [2.0.1](https://github.com/telekom-mms/terraform-azurerm-dns/tree/2.0.1) (2023-09-15)
 
@@ -15,10 +20,6 @@
 **Implemented enhancements:**
 
 - https://github.com/telekom-mms/terraform-azurerm-dns/issues/3 [\#20](https://github.com/telekom-mms/terraform-azurerm-dns/pull/20) ([michaelamattes](https://github.com/michaelamattes))
-
-**Closed issues:**
-
-- Dependency Dashboard [\#8](https://github.com/telekom-mms/terraform-azurerm-dns/issues/8)
 
 ## [2.0.0](https://github.com/telekom-mms/terraform-azurerm-dns/tree/2.0.0) (2023-09-14)
 
