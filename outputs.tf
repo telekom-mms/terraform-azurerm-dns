@@ -8,7 +8,6 @@ output "dns_zone" {
     }
   }
 }
-
 output "private_dns_zone" {
   description = "Outputs all attributes of resource_type."
   value = {
@@ -30,6 +29,16 @@ output "dns_a_record" {
     }
   }
 }
+output "private_dns_a_record" {
+  description = "Outputs all attributes of resource_type."
+  value = {
+    for private_dns_a_record in keys(azurerm_private_dns_a_record.private_dns_a_record) :
+    private_dns_a_record => {
+      for key, value in azurerm_private_dns_a_record.private_dns_a_record[private_dns_a_record] :
+      key => value
+    }
+  }
+}
 
 output "dns_cname_record" {
   description = "Outputs all attributes of resource_type."
@@ -37,6 +46,16 @@ output "dns_cname_record" {
     for dns_cname_record in keys(azurerm_dns_cname_record.dns_cname_record) :
     dns_cname_record => {
       for key, value in azurerm_dns_cname_record.dns_cname_record[dns_cname_record] :
+      key => value
+    }
+  }
+}
+output "private_dns_cname_record" {
+  description = "Outputs all attributes of resource_type."
+  value = {
+    for private_dns_cname_record in keys(azurerm_private_dns_cname_record.private_dns_cname_record) :
+    private_dns_cname_record => {
+      for key, value in azurerm_private_dns_cname_record.private_dns_cname_record[private_dns_cname_record] :
       key => value
     }
   }
@@ -52,6 +71,16 @@ output "dns_txt_record" {
     }
   }
 }
+output "private_dns_txt_record" {
+  description = "Outputs all attributes of resource_type."
+  value = {
+    for private_dns_txt_record in keys(azurerm_private_dns_txt_record.private_dns_txt_record) :
+    private_dns_txt_record => {
+      for key, value in azurerm_private_dns_txt_record.private_dns_txt_record[private_dns_txt_record] :
+      key => value
+    }
+  }
+}
 
 output "dns_mx_record" {
   description = "Outputs all attributes of resource_type."
@@ -59,6 +88,16 @@ output "dns_mx_record" {
     for dns_mx_record in keys(azurerm_dns_mx_record.dns_mx_record) :
     dns_mx_record => {
       for key, value in azurerm_dns_mx_record.dns_mx_record[dns_mx_record] :
+      key => value
+    }
+  }
+}
+output "private_dns_mx_record" {
+  description = "Outputs all attributes of resource_type."
+  value = {
+    for private_dns_mx_record in keys(azurerm_private_dns_mx_record.private_dns_mx_record) :
+    private_dns_mx_record => {
+      for key, value in azurerm_private_dns_mx_record.private_dns_mx_record[private_dns_mx_record] :
       key => value
     }
   }
