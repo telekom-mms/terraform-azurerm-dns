@@ -1,5 +1,13 @@
 # Changelog
 
+## [2.0.3](https://github.com/telekom-mms/terraform-azurerm-dns/tree/2.0.3) (2024-11-15)
+
+[Full Changelog](https://github.com/telekom-mms/terraform-azurerm-dns/compare/2.0.2...2.0.3)
+
+**Implemented enhancements:**
+
+- More private dns resources [\#26](https://github.com/telekom-mms/terraform-azurerm-dns/pull/26) ([habr-mms](https://github.com/habr-mms))
+
 ## [2.0.2](https://github.com/telekom-mms/terraform-azurerm-dns/tree/2.0.2) (2024-08-28)
 
 [Full Changelog](https://github.com/telekom-mms/terraform-azurerm-dns/compare/2.0.1...2.0.2)
