@@ -1,8 +1,9 @@
 /**
 * # dns
 *
-* This module manages the hashicorp/azurerm dns resources.
+* This module manages the hashicorp/azurerm dns and private dns resources.
 * For more information see https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs > dns
+* and https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs > private dns
 *
 */
 
@@ -69,6 +70,18 @@ resource "azurerm_dns_a_record" "dns_a_record" {
   tags = local.dns_a_record[each.key].tags
 }
 
+resource "azurerm_private_dns_a_record" "private_dns_a_record" {
+  for_each = var.private_dns_a_record
+
+  name                = local.private_dns_a_record[each.key].name == "" ? each.key : local.private_dns_a_record[each.key].name
+  resource_group_name = local.private_dns_a_record[each.key].resource_group_name
+  zone_name           = local.private_dns_a_record[each.key].zone_name
+  ttl                 = local.private_dns_a_record[each.key].ttl
+  records             = local.private_dns_a_record[each.key].records
+
+  tags = local.private_dns_a_record[each.key].tags
+}
+
 resource "azurerm_dns_cname_record" "dns_cname_record" {
   for_each = var.dns_cname_record
 
@@ -80,6 +93,18 @@ resource "azurerm_dns_cname_record" "dns_cname_record" {
   target_resource_id  = local.dns_cname_record[each.key].target_resource_id
 
   tags = local.dns_cname_record[each.key].tags
+}
+
+resource "azurerm_private_dns_cname_record" "private_dns_cname_record" {
+  for_each = var.private_dns_cname_record
+
+  name                = local.private_dns_cname_record[each.key].name == "" ? each.key : local.private_dns_cname_record[each.key].name
+  resource_group_name = local.private_dns_cname_record[each.key].resource_group_name
+  zone_name           = local.private_dns_cname_record[each.key].zone_name
+  ttl                 = local.private_dns_cname_record[each.key].ttl
+  record              = local.private_dns_cname_record[each.key].record
+
+  tags = local.private_dns_cname_record[each.key].tags
 }
 
 resource "azurerm_dns_txt_record" "dns_txt_record" {
@@ -101,6 +126,25 @@ resource "azurerm_dns_txt_record" "dns_txt_record" {
   tags = local.dns_txt_record[each.key].tags
 }
 
+resource "azurerm_private_dns_txt_record" "private_dns_txt_record" {
+  for_each = var.private_dns_txt_record
+
+  name                = local.private_dns_txt_record[each.key].name == "" ? each.key : local.private_dns_txt_record[each.key].name
+  resource_group_name = local.private_dns_txt_record[each.key].resource_group_name
+  zone_name           = local.private_dns_txt_record[each.key].zone_name
+  ttl                 = local.private_dns_txt_record[each.key].ttl
+
+  dynamic "record" {
+    for_each = local.private_dns_txt_record[each.key].record
+
+    content {
+      value = local.private_dns_txt_record[each.key].record[record.key].value
+    }
+  }
+
+  tags = local.private_dns_txt_record[each.key].tags
+}
+
 resource "azurerm_dns_mx_record" "dns_mx_record" {
   for_each = var.dns_mx_record
 
@@ -119,6 +163,26 @@ resource "azurerm_dns_mx_record" "dns_mx_record" {
   }
 
   tags = local.dns_mx_record[each.key].tags
+}
+
+resource "azurerm_private_dns_mx_record" "private_dns_mx_record" {
+  for_each = var.private_dns_mx_record
+
+  name                = local.private_dns_mx_record[each.key].name == "" ? each.key : local.private_dns_mx_record[each.key].name
+  resource_group_name = local.private_dns_mx_record[each.key].resource_group_name
+  zone_name           = local.private_dns_mx_record[each.key].zone_name
+  ttl                 = local.private_dns_mx_record[each.key].ttl
+
+  dynamic "record" {
+    for_each = local.private_dns_mx_record[each.key].record
+
+    content {
+      preference = local.private_dns_mx_record[each.key].record[record.key].preference
+      exchange   = local.private_dns_mx_record[each.key].record[record.key].exchange
+    }
+  }
+
+  tags = local.private_dns_mx_record[each.key].tags
 }
 
 resource "azurerm_private_dns_zone_virtual_network_link" "private_dns_zone_virtual_network_link" {
