@@ -1,5 +1,13 @@
 # Changelog
 
+## [3.0.0](https://github.com/telekom-mms/terraform-azurerm-dns/tree/3.0.0) (2025-08-28)
+
+[Full Changelog](https://github.com/telekom-mms/terraform-azurerm-dns/compare/2.0.3...3.0.0)
+
+**Merged pull requests:**
+
+- upgrade azurerm version [\#27](https://github.com/telekom-mms/terraform-azurerm-dns/pull/27) ([michaelamattes](https://github.com/michaelamattes))
+
 ## [2.0.3](https://github.com/telekom-mms/terraform-azurerm-dns/tree/2.0.3) (2024-11-15)
 
 [Full Changelog](https://github.com/telekom-mms/terraform-azurerm-dns/compare/2.0.2...2.0.3)
