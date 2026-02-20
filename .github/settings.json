@@ -5,15 +5,19 @@
     "default_branch": "main",
     "homepage": "https://telekom-mms.github.io/terraform-template",
     "topics": [
-      "terraform",
       "azure",
-      "dns-zone",
-      "private-dns-zone",
       "dns-a-record",
       "dns-cname-record",
-      "dns-txt-record",
       "dns-mx-record",
-      "private-dns-zone-virtual-network-link"
+      "dns-txt-record",
+      "dns-zone",
+      "private-dns-a-record",
+      "private-dns-cname-record",
+      "private-dns-mx-record",
+      "private-dns-txt-record",
+      "private-dns-zone",
+      "private-dns-zone-virtual-network-link",
+      "terraform"
     ]
   }
 }
