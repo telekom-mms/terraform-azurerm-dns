@@ -1,12 +1,20 @@
 # Changelog
 
+## [4.0.1](https://github.com/telekom-mms/terraform-azurerm-dns/tree/4.0.1) (2026-03-30)
+
+[Full Changelog](https://github.com/telekom-mms/terraform-azurerm-dns/compare/4.0.0...4.0.1)
+
+**Merged pull requests:**
+
+- chore\(config\): standardize renovate.json and update repository topics [\#29](https://github.com/telekom-mms/terraform-azurerm-dns/pull/29) ([mikaEz](https://github.com/mikaEz))
+
 ## [4.0.0](https://github.com/telekom-mms/terraform-azurerm-dns/tree/4.0.0) (2025-12-11)
 
 [Full Changelog](https://github.com/telekom-mms/terraform-azurerm-dns/compare/3.0.0...4.0.0)
 
 **Merged pull requests:**
 
-- Upgrade azurerm to version 4 [\#28](https://github.com/telekom-mms/terraform-azurerm-dns/pull/28) ([michaelamattes](https://github.com/michaelamattes))
+- Upgrade azurerm to version 4 [\#28](https://github.com/telekom-mms/terraform-azurerm-dns/pull/28) ([mikaEz](https://github.com/mikaEz))
 
 ## [3.0.0](https://github.com/telekom-mms/terraform-azurerm-dns/tree/3.0.0) (2025-08-28)
 
@@ -14,7 +22,7 @@
 
 **Merged pull requests:**
 
-- upgrade azurerm version [\#27](https://github.com/telekom-mms/terraform-azurerm-dns/pull/27) ([michaelamattes](https://github.com/michaelamattes))
+- upgrade azurerm version [\#27](https://github.com/telekom-mms/terraform-azurerm-dns/pull/27) ([mikaEz](https://github.com/mikaEz))
 
 ## [2.0.3](https://github.com/telekom-mms/terraform-azurerm-dns/tree/2.0.3) (2024-11-15)
 
@@ -31,11 +39,11 @@
 **Implemented enhancements:**
 
 - Please add support for resource azurerm\_private\_dns\_zone\_virtual\_network\_link to Module [\#3](https://github.com/telekom-mms/terraform-azurerm-dns/issues/3)
-- Pin version of azurerm to compatible state   [\#25](https://github.com/telekom-mms/terraform-azurerm-dns/pull/25) ([michaelamattes](https://github.com/michaelamattes))
+- Pin version of azurerm to compatible state   [\#25](https://github.com/telekom-mms/terraform-azurerm-dns/pull/25) ([mikaEz](https://github.com/mikaEz))
 
 **Merged pull requests:**
 
-- run terrascan in test setting directory [\#22](https://github.com/telekom-mms/terraform-azurerm-dns/pull/22) ([michaelamattes](https://github.com/michaelamattes))
+- run terrascan in test setting directory [\#22](https://github.com/telekom-mms/terraform-azurerm-dns/pull/22) ([mikaEz](https://github.com/mikaEz))
 
 ## [2.0.1](https://github.com/telekom-mms/terraform-azurerm-dns/tree/2.0.1) (2023-09-15)
 
@@ -43,7 +51,7 @@
 
 **Implemented enhancements:**
 
-- https://github.com/telekom-mms/terraform-azurerm-dns/issues/3 [\#20](https://github.com/telekom-mms/terraform-azurerm-dns/pull/20) ([michaelamattes](https://github.com/michaelamattes))
+- https://github.com/telekom-mms/terraform-azurerm-dns/issues/3 [\#20](https://github.com/telekom-mms/terraform-azurerm-dns/pull/20) ([mikaEz](https://github.com/mikaEz))
 
 ## [2.0.0](https://github.com/telekom-mms/terraform-azurerm-dns/tree/2.0.0) (2023-09-14)
 
@@ -55,11 +63,11 @@
 
 **Merged pull requests:**
 
-- Refactoring [\#19](https://github.com/telekom-mms/terraform-azurerm-dns/pull/19) ([michaelamattes](https://github.com/michaelamattes))
-- add Renovate Dependency Dashboard and automatic merge on patch updates [\#17](https://github.com/telekom-mms/terraform-azurerm-dns/pull/17) ([michaelamattes](https://github.com/michaelamattes))
+- Refactoring [\#19](https://github.com/telekom-mms/terraform-azurerm-dns/pull/19) ([mikaEz](https://github.com/mikaEz))
+- add Renovate Dependency Dashboard and automatic merge on patch updates [\#17](https://github.com/telekom-mms/terraform-azurerm-dns/pull/17) ([mikaEz](https://github.com/mikaEz))
 - Update actions/checkout action to v3.2.0 [\#16](https://github.com/telekom-mms/terraform-azurerm-dns/pull/16) ([renovate[bot]](https://github.com/apps/renovate))
 - Update actions/checkout action to v3.1.0 [\#15](https://github.com/telekom-mms/terraform-azurerm-dns/pull/15) ([renovate[bot]](https://github.com/apps/renovate))
-- fmt [\#14](https://github.com/telekom-mms/terraform-azurerm-dns/pull/14) ([michaelamattes](https://github.com/michaelamattes))
+- fmt [\#14](https://github.com/telekom-mms/terraform-azurerm-dns/pull/14) ([mikaEz](https://github.com/mikaEz))
 
 ## [1.0.3](https://github.com/telekom-mms/terraform-azurerm-dns/tree/1.0.3) (2022-07-22)
 
@@ -67,7 +75,7 @@
 
 **Implemented enhancements:**
 
-- add mx resource [\#13](https://github.com/telekom-mms/terraform-azurerm-dns/pull/13) ([michaelamattes](https://github.com/michaelamattes))
+- add mx resource [\#13](https://github.com/telekom-mms/terraform-azurerm-dns/pull/13) ([mikaEz](https://github.com/mikaEz))
 
 ## [1.0.2](https://github.com/telekom-mms/terraform-azurerm-dns/tree/1.0.2) (2022-05-09)
 
@@ -79,7 +87,7 @@
 - Update creyD/prettier\_action action to v4 [\#11](https://github.com/telekom-mms/terraform-azurerm-dns/pull/11) ([renovate[bot]](https://github.com/apps/renovate))
 - Update actions/checkout action [\#10](https://github.com/telekom-mms/terraform-azurerm-dns/pull/10) ([renovate[bot]](https://github.com/apps/renovate))
 - Update github-actions-x/commit action to v2.9 [\#9](https://github.com/telekom-mms/terraform-azurerm-dns/pull/9) ([renovate[bot]](https://github.com/apps/renovate))
-- add renovate config [\#5](https://github.com/telekom-mms/terraform-azurerm-dns/pull/5) ([michaelamattes](https://github.com/michaelamattes))
+- add renovate config [\#5](https://github.com/telekom-mms/terraform-azurerm-dns/pull/5) ([mikaEz](https://github.com/mikaEz))
 
 ## [1.0.1](https://github.com/telekom-mms/terraform-azurerm-dns/tree/1.0.1) (2022-03-18)
 
@@ -87,7 +95,7 @@
 
 **Merged pull requests:**
 
-- add more output arguments [\#4](https://github.com/telekom-mms/terraform-azurerm-dns/pull/4) ([michaelamattes](https://github.com/michaelamattes))
+- add more output arguments [\#4](https://github.com/telekom-mms/terraform-azurerm-dns/pull/4) ([mikaEz](https://github.com/mikaEz))
 
 ## [1.0.0](https://github.com/telekom-mms/terraform-azurerm-dns/tree/1.0.0) (2022-02-17)
 
@@ -99,7 +107,7 @@
 
 **Merged pull requests:**
 
-- Change var behaviour [\#1](https://github.com/telekom-mms/terraform-azurerm-dns/pull/1) ([michaelamattes](https://github.com/michaelamattes))
+- Change var behaviour [\#1](https://github.com/telekom-mms/terraform-azurerm-dns/pull/1) ([mikaEz](https://github.com/mikaEz))
 
 ## [0.0.1](https://github.com/telekom-mms/terraform-azurerm-dns/tree/0.0.1) (2021-12-17)
 
